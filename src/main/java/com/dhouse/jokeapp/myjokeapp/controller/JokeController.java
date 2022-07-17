@@ -3,6 +3,7 @@ package com.dhouse.jokeapp.myjokeapp.controller;
 import com.dhouse.jokeapp.myjokeapp.services.JokeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
@@ -17,7 +18,8 @@ public class JokeController {
     }
 
     @GetMapping("/")
-    public String showJoke(){
+    public String showJoke(Model model){
+        model.addAttribute("joke",jokeService.getJoke());
         return "showjoke";
     }
 }
