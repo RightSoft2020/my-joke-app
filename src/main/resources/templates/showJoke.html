@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http/www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Jokes</title>
+    <style>
+
+        body{
+            background-color: antiquewhite;
+            text-align: center;
+        }
+        h1{
+            border: solid 1px lightgoldenrodyellow;
+            background-color: green;
+            color: white;
+        }
+        p{
+            border: solid 2px lightgoldenrodyellow;
+            background-color: lightgreen;
+            color: black;
+            width: auto;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+  <h1>Jokes</h1>
+<p th:text="${joke}"></p>
+</body>
+</html>

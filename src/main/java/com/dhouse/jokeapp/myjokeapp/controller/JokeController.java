@@ -20,7 +20,7 @@ public class JokeController {
     @GetMapping("/")
     public String showJoke(Model model){
         model.addAttribute("joke",jokeService.getJoke());
-        return "showjoke";
+        return "showJoke";
     }
 }
 
